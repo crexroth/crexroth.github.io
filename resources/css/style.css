@@ -1,12 +1,12 @@
 body {
-    background-color: black;
+    background-color: #0C6F6E;
     text-align: center;
     font-family: "Verdana", sans-serif;
     color: white;
   }
   
   .cta {
-    color: aquamarine;
+    color: #4AB191;
     font-size: 16px;
   }
   
@@ -22,9 +22,23 @@ body {
   
   p {
     font-size: 21px;
-    color: gray;
+    color: #4AB191;
   }
   
   .footer {
     text-align: right;
   } 
+
+  .colors {
+    primary: #0C6F6E;
+    secondary: #4AB191;
+    text: #6C6A6F;
+    accent: #FFFFFF;
+    cb8ca37: #0C6F6E;
+    5164bdf: #FCC57D;
+    74b3eca: #411445;
+    14840da: #131D49;
+    67c1800: #434343;
+    8b21e07: #E0E0E0;
+    b0415f2: #FBFBFB;
+  }
