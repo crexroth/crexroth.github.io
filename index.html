@@ -11,108 +11,7 @@
     <script src="https://unpkg.com/lucide@latest"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-    <style>
-        body {
-            font-family: 'Inter', sans-serif;
-            overflow-x: hidden;
-        }
-        .font-script {
-            font-family: 'Dancing Script', cursive;
-        }
-        .gradient-text {
-            background: linear-gradient(135deg, #ff6b6b, #ff8e8e, #ffb4b4, #ffd4d4);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-        .heart-float {
-            position: absolute;
-            animation: float 6s ease-in-out infinite;
-            opacity: 0.6;
-        }
-        @keyframes float {
-            0%, 100% { transform: translateY(0) rotate(0deg); }
-            50% { transform: translateY(-20px) rotate(5deg); }
-        }
-        .pulse-heart {
-            animation: pulse 2s ease-in-out infinite;
-        }
-        @keyframes pulse {
-            0%, 100% { transform: scale(1); }
-            50% { transform: scale(1.1); }
-        }
-        .glass-card {
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-        }
-        .reveal-text {
-            opacity: 0;
-            transform: translateY(30px);
-        }
-        .photo-hover {
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        .photo-hover:hover {
-            transform: translateY(-5px) scale(1.02);
-            box-shadow: 0 20px 40px rgba(255, 107, 107, 0.3);
-        }
-        #hearts-container {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            pointer-events: none;
-            z-index: 0;
-        }
-        .floating-heart {
-            position: absolute;
-            color: #ff6b6b;
-            animation: floatUp 4s linear forwards;
-            pointer-events: none;
-        }
-        @keyframes floatUp {
-            0% {
-                opacity: 1;
-                transform: translateY(100vh) scale(0);
-            }
-            10% {
-                opacity: 1;
-                transform: translateY(90vh) scale(1);
-            }
-            90% {
-                opacity: 1;
-            }
-            100% {
-                opacity: 0;
-                transform: translateY(-10vh) scale(1.5);
-            }
-        }
-        .reason-card {
-            transition: all 0.4s ease;
-        }
-        .reason-card:hover {
-            transform: translateY(-10px);
-            background: linear-gradient(135deg, #fff5f5, #ffe0e0);
-        }
-        .love-letter {
-            background: linear-gradient(135deg, #fff9f9 0%, #fff0f0 100%);
-            box-shadow: 0 10px 40px rgba(255, 107, 107, 0.1);
-        }
-        .btn-love {
-            background: linear-gradient(135deg, #ff6b6b, #ff8e8e);
-            transition: all 0.3s ease;
-        }
-        .btn-love:hover {
-            transform: scale(1.05);
-            box-shadow: 0 10px 30px rgba(255, 107, 107, 0.4);
-        }
-        .separator {
-            height: 2px;
-            background: linear-gradient(90deg, transparent, #ff6b6b, transparent);
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body class="bg-gradient-to-br from-pink-50 via-red-50 to-white min-h-screen relative">
 
@@ -155,8 +54,7 @@
                 <span class="text-rose-600">Madelyn</span>
             </h1>
             <p class="text-lg md:text-xl text-gray-600 mb-8 max-w-2xl mx-auto leading-relaxed reveal-text">
-                To the most beautiful, kind, and amazing girlfriend in the world. 
-                This is a small digital token of my growing affinity for you.
+                To my beautiful, kind, incredible girlfriend. This is a digital token of my growing affinity for you.
             </p>
             <div class="flex flex-col sm:flex-row gap-4 justify-center items-center reveal-text">
                 <button onclick="createHeartBurst()" class="bg-white text-rose-500 border-2 border-rose-400 px-8 py-4 rounded-full font-semibold text-lg hover:bg-rose-50 transition flex items-center gap-2">
@@ -164,7 +62,7 @@
                     <i data-lucide="send" class="w-5 h-5"></i>
                 </button>
                 <button onclick="scrollToSection('letter')" class="btn-love text-white px-8 py-4 rounded-full font-semibold text-lg shadow-lg flex items-center gap-2">
-                    <span>Open My Heart</span>
+                    <span>Open Your Letter</span>
                     <i data-lucide="heart" class="w-5 h-5"></i>
                 </button>
             </div>
@@ -189,22 +87,17 @@
                     </div>
                     
                     <div class="space-y-4 text-gray-700 leading-relaxed text-lg">
-                        <p class="reveal-text">
-                            My love,
-                        </p>
+
                         <p class="reveal-text">
                             As I write this, my heart overflows with gratitude that you exist in my life. 
                             Every moment with you feels like a beautiful dream I never want to wake up from. 
                             Your smile lights up my darkest days, and your laughter is my favorite melody.
                         </p>
                         <p class="reveal-text">
-                            You are my best friend, my confidante, my partner in crime, and the love of my life. 
-                            The way you care for others, your passion for life, your strength during tough times—
-                            everything about you inspires me to be a better person.
+                            Text
                         </p>
                         <p class="reveal-text">
-                            This Valentine's Day, I want you to know that you are cherished beyond measure. 
-                            You are not just my girlfriend; you are my home, my safe place, my forever.
+                            Text
                         </p>
                         <p class="reveal-text font-script text-2xl text-rose-600 mt-8">
                             Yours Truly,<br>
@@ -274,19 +167,6 @@
                     </p>
                     <span class="text-rose-500 text-sm font-medium mt-2 inline-block">Click to reveal 💕</span>
                 </div>
-
-                <!-- Reason 4 -->
-                <div class="reason-card bg-white rounded-2xl p-6 shadow-lg border border-pink-100 cursor-pointer" onclick="toggleReason(this)">
-                    <div class="w-12 h-12 bg-rose-100 rounded-full flex items-center justify-center mb-4 text-2xl">
-                        ✨
-                    </div>
-                    <h3 class="font-semibold text-xl text-gray-800 mb-2">Just... You</h3>
-                    <p class="text-gray-600 text-sm hidden reason-details">
-                        Everything that makes you uniquely Madelyn. I wouldn't change a single thing. 
-                        You are perfect to me.
-                    </p>
-                    <span class="text-rose-500 text-sm font-medium mt-2 inline-block">Click to reveal 💕</span>
-                </div>
             </div>
         </div>
     </section>
@@ -295,7 +175,7 @@
     <section id="memories" class="py-20 px-4">
         <div class="max-w-6xl mx-auto">
             <div class="text-center mb-16">
-                <span class="text-rose-500 font-medium tracking-wider uppercase text-sm">Our Journey</span>
+                <span class="text-rose-500 font-medium tracking-wider uppercase text-sm">Building More</span>
                 <h2 class="font-script text-5xl md:text-6xl text-gray-800 mt-2 mb-4">Moments With You</h2>
                 <p class="text-gray-600 max-w-2xl mx-auto">
                     We finally got some pictures!
@@ -304,15 +184,21 @@
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 <div class="photo-hover rounded-2xl overflow-hidden shadow-lg relative group">
-                    <img src="http://static.photos/couple/640x360/42" alt="Memory 1" class="w-full h-64 object-cover">
+                    <img src="./img/holding.jpg" alt="Memory 1" class="w-full h-64 object-cover">
                     <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
-                        <p class="text-white font-medium">Our First Date 💕</p>
+                        <p class="text-white font-medium">Hubba Hubba 💕</p>
                     </div>
                 </div>
-                <div class="photo-hover rounded-2xl overflow-hidden shadow-lg relative group md:col-span-2">
-                    <img src="http://static.photos/nature/1024x576/123" alt="Memory 2" class="w-full h-64 object-cover">
+                <div class="photo-hover rounded-2xl overflow-hidden shadow-lg relative group md:col-span-1">
+                    <img src="./img/museum.jpg" alt="Memory 2" class="w-full h-64 object-cover">
                     <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
-                        <p class="text-white font-medium">Hubba Hubba 🌟</p>
+                        <p class="text-white font-medium">Fun Times 🌟</p>
+                    </div>
+                </div>
+                <div class="photo-hover rounded-2xl overflow-hidden shadow-lg relative group md:col-span-1">
+                    <img src="./img/kissing.jpg" alt="Memory 3" class="w-full h-64 object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
+                        <p class="text-white font-medium">Huminahumina 💗</p>
                     </div>
                 </div>
             </div>
@@ -329,7 +215,6 @@
 
         <div class="max-w-2xl mx-auto text-center relative z-10">
             <h2 class="font-script text-4xl md:text-5xl text-gray-800 mb-6">Will You Be My Valentine?</h2>
-            <p class="text-gray-600 mb-8 text-lg">Not just today, but every day for the rest of our lives?</p>
             
             <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
                 <button onclick="sayYes()" id="yes-btn" class="btn-love text-white px-12 py-4 rounded-full font-bold text-xl shadow-xl transform transition hover:scale-110">
@@ -342,7 +227,7 @@
 
             <div id="yes-response" class="hidden mt-8 p-6 bg-white rounded-2xl shadow-lg border-2 border-rose-300">
                 <div class="text-6xl mb-4">🎉💕🥰</div>
-                <h3 class="font-script text-3xl text-rose-600 mb-2">You Made Me The Happiest!</h3>
+                <h3 class="font-script text-3xl text-rose-600 mb-2">You Make Me The Happiest!</h3>
                 <p class="text-gray-600">I promise to cherish you and make every day special. Here's to choosing each other! 💕</p>
             </div>
         </div>
@@ -414,8 +299,8 @@
             
             // Show sweet alert
             const messages = [
-                "I love you Madelyn! 💕",
-                "You're my everything! 💖",
+                "You're the best, Madelyn! 💕",
+                "We put the 'us' in Bucyrus, cousin! 💖",
                 "Forever and always! 💗",
                 "You make my heart happy! 💝"
             ];
