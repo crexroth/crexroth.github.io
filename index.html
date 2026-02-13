@@ -125,8 +125,8 @@
             <div class="font-script text-2xl text-rose-500 font-bold">Madds and Me 💕</div>
             <div class="hidden md:flex space-x-6 text-sm font-medium text-gray-600">
                 <a href="#home" class="hover:text-rose-500 transition">Home</a>
-                <a href="#letter" class="hover:text-rose-500 transition">My Letter</a>
-                <a href="#reasons" class="hover:text-rose-500 transition">Why I Love You</a>
+                <a href="#letter" class="hover:text-rose-500 transition">Letter</a>
+                <a href="#reasons" class="hover:text-rose-500 transition">Me Like You</a>
                 <a href="#memories" class="hover:text-rose-500 transition">Us</a>
             </div>
             <a href="https://open.spotify.com/playlist/37i9dQZF1EJD8Ju9G04ttX?si=94d76533be5445c1" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 text-rose-500 hover:text-rose-600 transition bg-transparent border-none cursor-pointer">
@@ -156,16 +156,16 @@
             </h1>
             <p class="text-lg md:text-xl text-gray-600 mb-8 max-w-2xl mx-auto leading-relaxed reveal-text">
                 To the most beautiful, kind, and amazing girlfriend in the world. 
-                This is a small digital token of my endless love for you.
+                This is a small digital token of my growing affinity for you.
             </p>
             <div class="flex flex-col sm:flex-row gap-4 justify-center items-center reveal-text">
+                <button onclick="createHeartBurst()" class="bg-white text-rose-500 border-2 border-rose-400 px-8 py-4 rounded-full font-semibold text-lg hover:bg-rose-50 transition flex items-center gap-2">
+                    <span>Give me sumn</span>
+                    <i data-lucide="send" class="w-5 h-5"></i>
+                </button>
                 <button onclick="scrollToSection('letter')" class="btn-love text-white px-8 py-4 rounded-full font-semibold text-lg shadow-lg flex items-center gap-2">
                     <span>Open My Heart</span>
                     <i data-lucide="heart" class="w-5 h-5"></i>
-                </button>
-                <button onclick="createHeartBurst()" class="bg-white text-rose-500 border-2 border-rose-400 px-8 py-4 rounded-full font-semibold text-lg hover:bg-rose-50 transition flex items-center gap-2">
-                    <span>Send Love</span>
-                    <i data-lucide="send" class="w-5 h-5"></i>
                 </button>
             </div>
         </div>
@@ -207,8 +207,8 @@
                             You are not just my girlfriend; you are my home, my safe place, my forever.
                         </p>
                         <p class="reveal-text font-script text-2xl text-rose-600 mt-8">
-                            Forever Yours,<br>
-                            [Your Name] 💕
+                            Yours Truly,<br>
+                            Chris 💕
                         </p>
                     </div>
 
@@ -231,7 +231,7 @@
         <div class="max-w-6xl mx-auto">
             <div class="text-center mb-16">
                 <span class="text-rose-500 font-medium tracking-wider uppercase text-sm">Countless Reasons</span>
-                <h2 class="font-script text-5xl md:text-6xl text-gray-800 mt-2 mb-4">Why I Love You</h2>
+                <h2 class="font-script text-5xl md:text-6xl text-gray-800 mt-2 mb-4">Why I Extreme Like You</h2>
                 <div class="separator w-24 mx-auto"></div>
             </div>
 
@@ -262,32 +262,6 @@
                     <span class="text-rose-500 text-sm font-medium mt-2 inline-block">Click to reveal 💕</span>
                 </div>
 
-                <!-- Reason 3 -->
-                <div class="reason-card bg-white rounded-2xl p-6 shadow-lg border border-pink-100 cursor-pointer" onclick="toggleReason(this)">
-                    <div class="w-12 h-12 bg-rose-100 rounded-full flex items-center justify-center mb-4 text-2xl">
-                        💪
-                    </div>
-                    <h3 class="font-semibold text-xl text-gray-800 mb-2">Your Strength</h3>
-                    <p class="text-gray-600 text-sm hidden reason-details">
-                        You handle challenges with grace and resilience. Your strength inspires me daily 
-                        and makes me proud to stand by your side.
-                    </p>
-                    <span class="text-rose-500 text-sm font-medium mt-2 inline-block">Click to reveal 💕</span>
-                </div>
-
-                <!-- Reason 4 -->
-                <div class="reason-card bg-white rounded-2xl p-6 shadow-lg border border-pink-100 cursor-pointer" onclick="toggleReason(this)">
-                    <div class="w-12 h-12 bg-rose-100 rounded-full flex items-center justify-center mb-4 text-2xl">
-                        🎨
-                    </div>
-                    <h3 class="font-semibold text-xl text-gray-800 mb-2">Your Creativity</h3>
-                    <p class="text-gray-600 text-sm hidden reason-details">
-                        The way you express yourself, your artistic soul, and your unique perspective 
-                        on life adds color to my world.
-                    </p>
-                    <span class="text-rose-500 text-sm font-medium mt-2 inline-block">Click to reveal 💕</span>
-                </div>
-
                 <!-- Reason 5 -->
                 <div class="reason-card bg-white rounded-2xl p-6 shadow-lg border border-pink-100 cursor-pointer" onclick="toggleReason(this)">
                     <div class="w-12 h-12 bg-rose-100 rounded-full flex items-center justify-center mb-4 text-2xl">
@@ -301,7 +275,7 @@
                     <span class="text-rose-500 text-sm font-medium mt-2 inline-block">Click to reveal 💕</span>
                 </div>
 
-                <!-- Reason 6 -->
+                <!-- Reason 4 -->
                 <div class="reason-card bg-white rounded-2xl p-6 shadow-lg border border-pink-100 cursor-pointer" onclick="toggleReason(this)">
                     <div class="w-12 h-12 bg-rose-100 rounded-full flex items-center justify-center mb-4 text-2xl">
                         ✨
@@ -324,8 +298,7 @@
                 <span class="text-rose-500 font-medium tracking-wider uppercase text-sm">Our Journey</span>
                 <h2 class="font-script text-5xl md:text-6xl text-gray-800 mt-2 mb-4">Moments With You</h2>
                 <p class="text-gray-600 max-w-2xl mx-auto">
-                    Every picture tells a story of us. Here are some memories that make my heart full.
-                    (Replace these with your actual photos!)
+                    We finally got some pictures!
                 </p>
             </div>
 
@@ -339,27 +312,8 @@
                 <div class="photo-hover rounded-2xl overflow-hidden shadow-lg relative group md:col-span-2">
                     <img src="http://static.photos/nature/1024x576/123" alt="Memory 2" class="w-full h-64 object-cover">
                     <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
-                        <p class="text-white font-medium">Adventures Together 🌟</p>
+                        <p class="text-white font-medium">Hubba Hubba 🌟</p>
                     </div>
-                </div>
-                <div class="photo-hover rounded-2xl overflow-hidden shadow-lg relative group md:col-span-2">
-                    <img src="http://static.photos/workspace/1024x576/88" alt="Memory 3" class="w-full h-64 object-cover">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
-                        <p class="text-white font-medium">Cozy Moments ☕</p>
-                    </div>
-                </div>
-                <div class="photo-hover rounded-2xl overflow-hidden shadow-lg relative group">
-                    <img src="http://static.photos/travel/640x360/55" alt="Memory 4" class="w-full h-64 object-cover">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
-                        <p class="text-white font-medium">Future Travels ✈️</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="mt-12 text-center">
-                <div class="inline-flex items-center gap-2 bg-white px-6 py-3 rounded-full shadow-md border border-pink-100">
-                    <i data-lucide="camera" class="w-5 h-5 text-rose-500"></i>
-                    <span class="text-gray-600 text-sm">Add your own photos by replacing the image URLs!</span>
                 </div>
             </div>
         </div>
@@ -389,7 +343,7 @@
             <div id="yes-response" class="hidden mt-8 p-6 bg-white rounded-2xl shadow-lg border-2 border-rose-300">
                 <div class="text-6xl mb-4">🎉💕🥰</div>
                 <h3 class="font-script text-3xl text-rose-600 mb-2">You Made Me The Happiest!</h3>
-                <p class="text-gray-600">I promise to love you, cherish you, and make every day special. Here's to forever! 💕</p>
+                <p class="text-gray-600">I promise to cherish you and make every day special. Here's to choosing each other! 💕</p>
             </div>
         </div>
     </section>
@@ -402,15 +356,12 @@
                 <span class="font-script text-3xl text-rose-500">Madelyn</span>
                 <span class="text-4xl">💕</span>
             </div>
-            <p class="text-gray-500 mb-6">Created with endless love for you</p>
+            <p class="text-gray-500 mb-6">Happy Valentine's Day 2026 💌</p>
             <div class="flex justify-center gap-4 text-gray-400">
                 <i data-lucide="heart" class="w-5 h-5 fill-rose-200 text-rose-200"></i>
                 <i data-lucide="heart" class="w-5 h-5 fill-rose-300 text-rose-300"></i>
                 <i data-lucide="heart" class="w-5 h-5 fill-rose-400 text-rose-400"></i>
                 <i data-lucide="heart" class="w-5 h-5 fill-rose-500 text-rose-500"></i>
-            </div>
-            <p class="text-xs text-gray-400 mt-8">Happy Valentine's Day 2024 💌</p>
-        </div>
     </footer>
 
     <script>
