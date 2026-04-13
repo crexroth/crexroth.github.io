@@ -1,100 +1,149 @@
-        body {
-            font-family: 'Inter', sans-serif;
-            overflow-x: hidden;
-        }
-        .font-script {
-            font-family: 'Dancing Script', cursive;
-        }
-        .gradient-text {
-            background: linear-gradient(135deg, #ff6b6b, #ff8e8e, #ffb4b4, #ffd4d4);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-        .heart-float {
-            position: absolute;
-            animation: float 6s ease-in-out infinite;
-            opacity: 0.6;
-        }
-        @keyframes float {
-            0%, 100% { transform: translateY(0) rotate(0deg); }
-            50% { transform: translateY(-20px) rotate(5deg); }
-        }
-        .pulse-heart {
-            animation: pulse 2s ease-in-out infinite;
-        }
-        @keyframes pulse {
-            0%, 100% { transform: scale(1); }
-            50% { transform: scale(1.1); }
-        }
-        .glass-card {
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-        }
-        .reveal-text {
-            opacity: 0;
-            transform: translateY(30px);
-        }
-        .photo-hover {
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        .photo-hover:hover {
-            transform: translateY(-5px) scale(1.02);
-            box-shadow: 0 20px 40px rgba(255, 107, 107, 0.3);
-        }
-        #hearts-container {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            pointer-events: none;
-            z-index: 0;
-        }
-        .floating-heart {
-            position: absolute;
-            color: #ff6b6b;
-            animation: floatUp 4s linear forwards;
-            pointer-events: none;
-        }
-        @keyframes floatUp {
-            0% {
-                opacity: 1;
-                transform: translateY(100vh) scale(0);
-            }
-            10% {
-                opacity: 1;
-                transform: translateY(90vh) scale(1);
-            }
-            90% {
-                opacity: 1;
-            }
-            100% {
-                opacity: 0;
-                transform: translateY(-10vh) scale(1.5);
-            }
-        }
-        .reason-card {
-            transition: all 0.4s ease;
-        }
-        .reason-card:hover {
-            transform: translateY(-10px);
-            background: linear-gradient(135deg, #fff5f5, #ffe0e0);
-        }
-        .love-letter {
-            background: linear-gradient(135deg, #fff9f9 0%, #fff0f0 100%);
-            box-shadow: 0 10px 40px rgba(255, 107, 107, 0.1);
-        }
-        .btn-love {
-            background: linear-gradient(135deg, #ff6b6b, #ff8e8e);
-            transition: all 0.3s ease;
-        }
-        .btn-love:hover {
-            transform: scale(1.05);
-            box-shadow: 0 10px 30px rgba(255, 107, 107, 0.4);
-        }
-        .separator {
-            height: 2px;
-            background: linear-gradient(90deg, transparent, #ff6b6b, transparent);
-        }
+* { font-family: 'Quicksand', sans-serif; }
+h1, h2, h3, .font-display { font-family: 'Playfair Display', serif; }
+
+/* Gingham pattern */
+.gingham {
+  background-image:
+    linear-gradient(45deg, rgba(248,200,220,0.3) 25%, transparent 25%),
+    linear-gradient(-45deg, rgba(248,200,220,0.3) 25%, transparent 25%),
+    linear-gradient(45deg, transparent 75%, rgba(248,200,220,0.3) 75%),
+    linear-gradient(-45deg, transparent 75%, rgba(248,200,220,0.3) 75%);
+  background-size: 40px 40px;
+  background-position: 0 0, 0 20px, 20px -20px, -20px 0px;
+}
+
+.gingham-green {
+  background-image:
+    linear-gradient(45deg, rgba(168,197,160,0.3) 25%, transparent 25%),
+    linear-gradient(-45deg, rgba(168,197,160,0.3) 25%, transparent 25%),
+    linear-gradient(45deg, transparent 75%, rgba(168,197,160,0.3) 75%),
+    linear-gradient(-45deg, transparent 75%, rgba(168,197,160,0.3) 75%);
+  background-size: 40px 40px;
+  background-position: 0 0, 0 20px, 20px -20px, -20px 0px;
+}
+
+/* Floating animation */
+@keyframes float {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  33% { transform: translateY(-12px) rotate(3deg); }
+  66% { transform: translateY(-6px) rotate(-2deg); }
+}
+
+@keyframes floatSlow {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-8px); }
+}
+
+@keyframes sway {
+  0%, 100% { transform: rotate(-3deg); }
+  50% { transform: rotate(3deg); }
+}
+
+@keyframes confettiFall {
+  0% { transform: translateY(-100vh) rotate(0deg); opacity: 1; }
+  100% { transform: translateY(100vh) rotate(720deg); opacity: 0; }
+}
+
+@keyframes heartbeat {
+  0%, 100% { transform: scale(1); }
+  25% { transform: scale(1.15); }
+  50% { transform: scale(1); }
+  75% { transform: scale(1.08); }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes sparkle {
+  0%, 100% { opacity: 0; transform: scale(0); }
+  50% { opacity: 1; transform: scale(1); }
+}
+
+.float { animation: float 6s ease-in-out infinite; }
+.float-slow { animation: floatSlow 4s ease-in-out infinite; }
+.sway { animation: sway 3s ease-in-out infinite; }
+.heartbeat { animation: heartbeat 2s ease-in-out infinite; }
+.fade-in-up { animation: fadeInUp 0.8s ease-out forwards; opacity: 0; }
+
+.photo-frame {
+  background: white;
+  padding: 12px;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  transform: rotate(var(--rotation, 0deg));
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+.photo-frame:hover {
+  transform: rotate(0deg) scale(1.05);
+  box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+  z-index: 10;
+}
+
+.photo-placeholder {
+  background: linear-gradient(135deg, #fce4ec, #f3e5f5, #e8f5e9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: #c48b9f;
+  font-size: 0.85rem;
+  gap: 6px;
+}
+
+/* Confetti */
+.confetti-piece {
+  position: fixed;
+  width: 10px;
+  height: 10px;
+  top: -10px;
+  z-index: 9999;
+  pointer-events: none;
+  animation: confettiFall linear forwards;
+}
+
+/* Flower decorations */
+.flower::before {
+  content: '🌸';
+  position: absolute;
+  font-size: 1.2rem;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: #FFF8F0; }
+::-webkit-scrollbar-thumb { background: #F8C8DC; border-radius: 10px; }
+::-webkit-scrollbar-thumb:hover { background: #E8A0BF; }
+
+/* Smooth scroll */
+html { scroll-behavior: smooth; }
+
+.dotted-border {
+  border: 3px dashed #E8A0BF;
+  border-radius: 16px;
+}
+
+.section-divider {
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #F8C8DC, #A8C5A0, #FFE066, transparent);
+}
+
+.toast {
+  position: fixed;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%) translateY(100px);
+  background: white;
+  padding: 16px 28px;
+  border-radius: 50px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+  z-index: 9999;
+  transition: transform 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 600;
+  color: #E8A0BF;
+}
+.toast.show {
+  transform: translateX(-50%) translateY(0);
+}
